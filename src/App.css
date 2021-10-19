@@ -1,0 +1,156 @@
+.App {
+  text-align: left;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background: linear-gradient(45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab)
+  no-repeat;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: rgb(255, 255, 255);
+  font-style: italic;
+  position: relative;
+  animation: change 3s ease-in-out infinite;
+  background-size: 400% 400%;
+}
+@keyframes change {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.app-h1{
+  background-image: linear-gradient(45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-transform: uppercase;
+}
+
+.contains-list{
+  width: 70vw;
+}
+.btn{
+  display: flex;
+}
+button{
+  background-color: rgb(189 189 189);
+  padding: 20px;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  border: none;
+  font-weight: bold;
+  border-radius: 5px;
+  margin: 12px 0;
+  margin-right: auto;
+  min-width: 50px;
+  
+}
+button:hover{
+  opacity: 0.8;
+}
+
+.strick{
+  opacity: 0.5;
+  position: relative;
+  margin: 8px;
+  width: 100%;
+  text-align: left;
+  border-radius: 5px;
+  padding: 10px;
+}
+.strickDate{
+  opacity: 0.5;
+  position: relative;
+  margin: 8px;
+  width: 100%;
+  text-align: left;
+  border-radius: 5px;
+  padding: 10px;
+
+}
+.faild{
+  color: yellow;
+}
+
+.nostrick{
+  position: relative;
+  margin: 8px;
+  width: 100%;
+  text-align: left;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 10px;
+}
+.form{
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.form-group .input{
+  height: 27px;
+  margin-right: auto;
+  margin-left: 10px;
+  width: 90%;
+  border-radius: 5px;
+  padding: 5px;
+}
+.form-group label{
+  min-width: 10%;
+  font-size: 15px;
+  line-height: 27px;
+}
+.btn_complete{
+  background: rgb(22, 133, 22);
+  color: #fff;
+}
+.btn_Accomplished{
+  background: #00708f;
+}
+.btn_del_complete{
+  background: rgb(255, 55, 55);
+}
+.btn_update_complete{
+  background-color: rgb(255, 153, 0);
+}
+.btn_del_Accomplished,
+.btn_update_Accomplished{
+  display: none;
+}
