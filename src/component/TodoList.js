@@ -6,7 +6,6 @@ import 'react-confirm-alert/src/react-confirm-alert.css';
 import StarIcon from '@material-ui/icons/Star';
 import WorkIcon from '@material-ui/icons/Work';
 import DoneIcon from '@mui/icons-material/Done';
-import { fontSize } from '@mui/system';
 
 const ToDoList = ({toDoList,handleToggle,handleFilter,handleDelete,startUpdate,endUpdate}) => {
     const handleClick = (e) => {
