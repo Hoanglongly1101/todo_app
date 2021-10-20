@@ -1,5 +1,6 @@
 .App {
   text-align: left;
+  
 }
 
 .App-logo {
@@ -63,7 +64,7 @@
   width: 70vw;
 }
 .btn{
-  display: flex;
+display: flex;
 }
 button{
   background-color: rgb(189 189 189);
@@ -73,8 +74,9 @@ button{
   border: none;
   font-weight: bold;
   border-radius: 5px;
-  margin: 12px 0;
-  margin-right: auto;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
   min-width: 50px;
   
 }
@@ -125,17 +127,18 @@ button:hover{
   flex-wrap: wrap;
 }
 .form-group .input{
-  height: 27px;
+  height: 50px;
   margin-right: auto;
   margin-left: 10px;
-  width: 90%;
+  width: 100%;
   border-radius: 5px;
   padding: 5px;
 }
 .form-group label{
   min-width: 10%;
-  font-size: 15px;
+  font-size: 20px;
   line-height: 27px;
+  padding-bottom: 10px;
 }
 .btn_complete{
   background: rgb(22, 133, 22);

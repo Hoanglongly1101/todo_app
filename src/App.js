@@ -8,6 +8,7 @@ import 'react-confirm-alert/src/react-confirm-alert.css'; //Import CSS
 import ToDoList from "./component/TodoList";
 import ToDoForm from "./component/TodoForm";
 import storage from './util/storage'
+import { Password } from "@mui/icons-material";
 // import db from './db.json'
 
 function App() {
@@ -105,9 +106,43 @@ function App() {
       });
       }
   }
+ //login
+//  const adminUser  = {
+//    email: "admin@admin.com",
+//    password: "admin123"
+//  }
+//  const [user, setUser] = useState({name:"", email:""});
+//  const [error, setError] = useState("");
+//  const Login = details => {
+//    console.log(details);
+//    if(details.email == adminUser.email  && details.password == adminUser.password){
+//      console.log("Logged in");
+//      setUser({
+//        name: details.name,
+//        email: details.email
+//      });
+      
+//    }
+//    else{
+//      setError("Details do not match!!");
+//    }
+//  }
+//  const Logout = () => {
+//    setUser({name:"", email:""});
+//  }
   return (
-    <div className="App">
-      <header className="App-header">
+    // <div className="App">
+    //   {(user.email != "")?(
+    //     <div className="welcome">
+    //       <h2>Welcome, <span>{user.name}</span></h2>
+    //       <button onClick={Logout}>Logout</button>
+    //     </div>
+    //   ):(
+    //     <LoginForm Login={Login} error={error}/>
+    //   )}
+      
+    // </div>
+    <header className="App-header">
         <h1 className="app-h1"> Todo App </h1>
         <div>
           <ToDoForm addTask={addTask} />
@@ -121,7 +156,6 @@ function App() {
           />
         </div>
       </header>
-    </div>
   );
 }
 export default App;

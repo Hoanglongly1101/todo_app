@@ -6,6 +6,7 @@ import 'react-confirm-alert/src/react-confirm-alert.css';
 import StarIcon from '@material-ui/icons/Star';
 import WorkIcon from '@material-ui/icons/Work';
 import DoneIcon from '@mui/icons-material/Done';
+import { fontSize } from '@mui/system';
 
 const ToDoList = ({toDoList,handleToggle,handleFilter,handleDelete,startUpdate,endUpdate}) => {
     const handleClick = (e) => {
@@ -48,10 +49,13 @@ const ToDoList = ({toDoList,handleToggle,handleFilter,handleDelete,startUpdate,e
                         const hd = todo.complete ? '' : '(Keep working!!! (*￣3￣)╭)';
                         return (
                             <VerticalTimelineElement key={index} title={title} className={myClass} style={{fontFamily:'monospace'}}
-                                    contentStyle={{background: 'rgb(6 31 50)', color: 'white' }}
+                                    contentStyle={{background: 'rgb(6 31 50)', color: 'white' , height:'400px'}}
                                     contentArrowStyle={{ borderRight: '7px solid  rgb(6 31 50)' }}
                                     date={"Due at: " + todo.dateOf} id={String(todo.id)} icon={Icon}
                                     iconStyle={{ background: 'rgb(6 31 50)', color: '#fff' }}>
+                                        <p style={{fontSize: "25px", fontWeight:"bold", textAlign:"center"}} onClick={()=>startUpdate(todo)}>
+                                            Task: {todo.task}
+                                        </p>
                                         <p class="faild">{faildDate}</p>
                                         <p style={{color:'white',fontWeight:'bold',fontSize:'20px'}}>{hd}</p>
                                         <button onClick={handleClick} data-id={String(todo.id)}
@@ -61,9 +65,6 @@ const ToDoList = ({toDoList,handleToggle,handleFilter,handleDelete,startUpdate,e
                                         <button style={{marginLeft: "15px"}} data-id={String(todo.id)} 
                                         onClick={()=>endUpdate(todo,index)} className={btnUpdate}>Update</button>
                                         <h5 className="vertical-timeline-element-title">{title}</h5>
-                                        <p onClick={()=>startUpdate(todo)}>
-                                            Task: {todo.task}
-                                        </p>
                                 </VerticalTimelineElement>
                         )
                     })

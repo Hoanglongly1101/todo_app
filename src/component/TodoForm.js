@@ -31,7 +31,6 @@ const ToDoForm = ({addTask}) => {
     }
     return (
         <form className="form" onSubmit={handleSubmit}>
-            <button>Add</button>
             <div class="form-group">
                 <label for="task">What need to be done? </label>
                 <input value={userInput} type="text" onChange={handleChangeTask} required name="task" 
@@ -41,7 +40,9 @@ const ToDoForm = ({addTask}) => {
                 <label for="due">Due day: </label>
                 <input type="datetime-local" value={userDue} onChange={handleChangeDate} name="due"
                 className="input" id="due" style={{fontFamily:'monospace'}} required/>
+
             </div>
+            <button>Add</button>
         </form>
     );
 };
