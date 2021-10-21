@@ -69,7 +69,7 @@ const Home = () => {
     };
     // Xóa task item
     const handleDelete = (id)=>{
-      let del = toDoList.filter(todo => !todo.id );
+      let del = toDoList.filter(todo => !id ); // eslint-disable-next-line
       setToDoList(del);
       storage.set(del);
     }
