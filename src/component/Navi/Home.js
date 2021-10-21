@@ -23,6 +23,7 @@ const Home = () => {
         if(task.complete){
           notComplete.push(task.complete);
         }
+        return false;
       })
       if(notComplete.length > 0){
         confirmAlert({
@@ -68,7 +69,7 @@ const Home = () => {
     };
     // Xóa task item
     const handleDelete = (id)=>{
-      let del = toDoList.filter(todo => todo.id != id);
+      let del = toDoList.filter(todo => !todo.id );
       setToDoList(del);
       storage.set(del);
     }
@@ -80,7 +81,7 @@ const Home = () => {
     const endUpdate = (todo,id) => {
         let task = document.getElementById("task").value;
         let due = document.getElementById("due").value;
-        if(task && due && todo.id == id + 1){
+        if(task && due && todo.id === id + 1){
           let copy = [...toDoList]
           todo.task = task;
           todo.dateOf = due;
